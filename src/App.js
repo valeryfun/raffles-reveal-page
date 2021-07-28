@@ -7,6 +7,7 @@ import './App.css'
 import { Container } from 'react-bootstrap'
 import Home from './Screens/Home'
 import Vote from './Screens/Vote'
+import Footer from './Components/Footer'
 
 library.add(faSearch)
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
 						<Route path='/vote-dao' component={Vote} />
 					</Container>
 				</main>
+				<Footer />
 			</Router>
 		</div>
 	)

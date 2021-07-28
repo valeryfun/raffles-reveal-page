@@ -37,6 +37,16 @@
 	}
 }
 
+main {
+	min-height: 90vh;
+}
+
+.footer {
+	background: #2c0346;
+	color: #ffffff;
+	padding: 20px;
+}
+
 a.nav-link:focus,
 a.nav-link:active,
 a.nav-link:visited {
@@ -54,4 +64,50 @@ a.nav-link:visited {
 
 .searchbar-text {
 	background: rgba(234, 234, 255, 0.4);
+}
+
+.buy-tickets-button {
+	float: right;
+	background: #550ded !important;
+	border: #550ded !important;
+}
+
+.get-tix-header {
+	float: left;
+	font-weight: bold;
+	background: #ffffff;
+}
+
+.item {
+	background: white;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 10px;
+	text-align: left;
+	box-shadow: 0 1px 0 rgba(9, 45, 66, 0.25);
+}
+
+.item:hover {
+	cursor: pointer;
+	background: #f5f6f7;
+}
+
+h3 {
+	text-align: left;
+	padding-left: 10px;
+	margin: 10px 0;
+}
+
+.grab {
+	cursor: grab;
+}
+.grabbing {
+	cursor: grabbing;
+	border: 1px dotted;
+}
+
+.element {
+	height: 50px;
+	width: 50px;
+	border: 1px solid #000000;
 }
