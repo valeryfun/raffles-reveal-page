@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Row, Col, Card, Button } from 'react-bootstrap'
+import { Container, Row, Col, Card, Button, Dropdown } from 'react-bootstrap'
 import DropItem from '../Components/DropItem'
 import DragItem from '../Components/DragItem'
 
@@ -54,25 +54,46 @@ const Vote = () => {
 					<Card>
 						<Card.Title></Card.Title>
 						<Card.Body>
-							<DropItem
-								heading='Collectors Event'
-								onDrop={id => {
-									const currentTickets = { ...ticketValue[id] }
-									currentTickets.state = 'event'
-									setTicketValue({
-										...ticketValue,
-										...{ [id]: currentTickets }
-									})
-								}}
-							>
-								{Object.keys(ticketValue)
-									.map(key => ({ id: key, ...ticketValue[key] }))
-									.filter(ticket => ticket.state === 'event')
-									.map(ticket => (
-										<DragItem id={ticket.id} data={ticket} key={ticket.id} />
-									))}
-							</DropItem>
+							<Container className='box'>
+								<DropItem
+									heading='Collectors Event'
+									onDrop={id => {
+										const currentTickets = { ...ticketValue[id] }
+										currentTickets.state = 'event'
+										setTicketValue({
+											...ticketValue,
+											...{ [id]: currentTickets }
+										})
+									}}
+								>
+									{Object.keys(ticketValue)
+										.map(key => ({ id: key, ...ticketValue[key] }))
+										.filter(ticket => ticket.state === 'event')
+										.map(ticket => (
+											<DragItem id={ticket.id} data={ticket} key={ticket.id} />
+										))}
+								</DropItem>
+							</Container>
 						</Card.Body>
+						<Card.Footer className='vote-card-footer'>
+							<Row>
+								<Col md={8}>
+									<h5>Draw Tickets</h5>
+									<p>
+										<strong>10</strong> Tickets found
+									</p>
+								</Col>
+								<Col md={4} className='get-tickets-col'>
+									<Dropdown.Toggle
+										variant='outline-secondary'
+										className='dropdown-toggle'
+									>
+										Silver Ticket (1)
+									</Dropdown.Toggle>
+									<Button className='draw-tickets-button'>Draw Ticket</Button>
+								</Col>
+							</Row>
+						</Card.Footer>
 					</Card>
 				</Col>
 			</Row>

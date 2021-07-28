@@ -38,7 +38,7 @@
 }
 
 main {
-	min-height: 90vh;
+	min-height: 80vh;
 }
 
 .footer {
@@ -77,6 +77,24 @@ a.nav-link:visited {
 	font-weight: bold;
 	background: #ffffff;
 }
+.dropdown-toggle {
+	margin: 5px;
+}
+
+.draw-tickets-button {
+	float: right;
+	background: #550ded !important;
+	border: #550ded !important;
+	margin: 5px;
+}
+.vote-card-footer {
+	background: #ffffff;
+}
+
+.get-tickets-col {
+	display: grid;
+	justify-content: center;
+}
 
 .item {
 	background: white;
@@ -110,4 +128,9 @@ h3 {
 	height: 50px;
 	width: 50px;
 	border: 1px solid #000000;
+}
+
+.box {
+	display: flex;
+	width: 100%;
 }
